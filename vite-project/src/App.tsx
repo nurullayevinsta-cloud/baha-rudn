@@ -1,34 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import EinsteinEnergiya from './components/EinsteinEnergiya'
+import PifagorTeorema from './components/PifagorTeorema'
+import CilindrObem from './components/CilindrObem'
+import KvadratnoeUravnenie from './components/KvadratnoeUravnenie'
+import KvadratSummy from './components/KvadratSummy'
+import VodaFormula from './components/VodaFormula'
+import Logarifm from './components/Logarifm'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const spisokFormul = [
+    <EinsteinEnergiya key="1" />,
+    <PifagorTeorema key="2" />,
+    <CilindrObem key="3" />,
+    <KvadratnoeUravnenie key="4" />,
+    <KvadratSummy key="5" />,
+    <VodaFormula key="6" />,
+    <Logarifm key="7" />
+  ]
+  
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app-container">
+      <h1 className="zagolovok">Формулы для вёрстки:</h1>
+      <ol className="spisok-formul">
+        {spisokFormul}
+      </ol>
+    </div>
   )
 }
 
