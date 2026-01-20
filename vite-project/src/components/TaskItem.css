@@ -1,0 +1,20 @@
+.task-item {
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-left: 4px solid #646cff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.task-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-item-text {
+  font-size: 16px;
+  color: #333;
+  display: block;
+}
